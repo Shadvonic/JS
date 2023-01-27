@@ -15,22 +15,22 @@
         <script>
             let todo1 = 'Get groceries';
             let todo2 = 'Wash car';
-            let todo3 = 'Make dinner'
-            // create html element   // type of element
-            let element = document.createElement('div');
-            //change text inside html element
-            element.innerText = todo1;
-            // add to the div to body
-            document.body.appendChild(element); 
+            let todo3 = 'Make dinner';
 
-             element = document.createElement('div');
-             element.innerText = todo2;
-             document.body.appendChild(element);
+            let todos = ['Get groceries', 'Wash car', 'Make dinner' ]
+            todos.push('another todo');
+          
+            todos.forEach(function (todoTitle)  {
+                // create html element   // type of element
+                 let element = document.createElement('div');
+                //change text inside html element
+                element.innerText = todoTitle; 
+                // add to the div to body
+                document.body.appendChild(element); 
+            }); 
 
-             element = document.createElement('div');
-             element.innerText = todo3;
-             document.body.appendChild(element);
-
+   
+             
         </script>
 
     </body>
