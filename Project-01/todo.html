@@ -10,7 +10,9 @@
 
 
     <body>
-        <button>Press Me</button>
+
+        <input id="todo-title" type="text" />
+        <button onclick="addTodo()">Add Todo</button>
       
         <script>
             let todo1 = 'Get groceries';
@@ -18,7 +20,15 @@
             let todo3 = 'Make dinner';
 
             let todos = ['Get groceries', 'Wash car', 'Make dinner' ]
-            todos.push('another todo');
+
+            function addTodo() {
+                // store textbox 
+                let textbox = document.getElementById('todo-title');
+                // get whats in the textbox
+                let title = textbox.value; 
+                todos.push(title);
+            }
+            
           
             todos.forEach(function (todoTitle)  {
                 // create html element   // type of element
